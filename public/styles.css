@@ -19,7 +19,7 @@ body {
   font-size: 16px;
   background: var(--light-color);
   margin: 20px;
-  background-color: #3b5998;
+  background-color: #e6e9ff;
 }
 
 ul {
@@ -43,7 +43,7 @@ a {
 
 .chat-container {
   max-width: 1100px;
-  background: #3b5998;
+  background: #e6e9ff;
   margin: 30px auto;
   overflow: hidden;
 }
@@ -97,6 +97,38 @@ a {
   margin-bottom: 15px;
   background-color: var(--light-color);
   border-radius: 5px;
+}
+
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+#mydivtareas {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#mydivtareasheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
 }
 
 .chat-messages .message .meta {
@@ -187,4 +219,53 @@ a {
   .chat-sidebar {
     display: none;
   }
+}
+
+.tarea-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3f596e;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.tarea-container:hover {
+  background-color: #4b6b88;
+}
+
+.tarea-buttons {
+  display: flex;
+}
+
+.btn {
+  padding: 8px 12px;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-completado {
+  background-color: #f9c205;
+  color: #110e0b;
+  margin-right: 15px; /* Espacio entre los botones */
+}
+
+.btn-completado:hover {
+  background-color: #654f0b;
+  color: #fff;
+}
+
+.btn-eliminar {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background-color: #cc0000;
 }

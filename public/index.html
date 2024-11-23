@@ -14,7 +14,7 @@
 <body>
     <div class="join-container">
         <header class="join-header">
-            <h1><i class="fas fa-desktop"></i> ProgramadorChat</h1>
+            <h1><i class="fas fa-clipboard-list"></i> App de Tareas</h1>
         </header>
         <main class="join-main">
             <form action="chat.html">
@@ -25,12 +25,31 @@
                 <div class="form-control">
                     <label for="room">Sala</label>
                     <select name="room" id="room">
-                        <option value="DesarrolladorJr">Desarrollador Jr</option>
-                        <option value="ElCafecito">El Cafecito</option>
-                        <option value="Codificando">Codificando</option>
+                        <option value="Sexto A">Sexto A</option>
                     </select>
                 </div>
-                <button type="submit" class="btn">Unirse al chat</button>
+
+                <script>
+                    function redigidir(){
+                        const select = document.getElementById('user');
+                        const value = select.value;
+
+                    if (value === 'Docente'){
+                            window.location.href = 'chatdos.html';
+                    } else if(value === 'Estudiante'){
+                            window.location.href = 'chat.html';
+                    }}
+                </script>
+
+                <div class="form-control">
+                    <label for="user">Rol</label>
+                    <select name="use" id="user", onchange="redigidir()">
+                        <option value="Estudiante">Estudiante</option>
+                        <option value="Docente">Docente</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Entrar</button>                
             </form>
         </main>
     </div>

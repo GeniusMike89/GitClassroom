@@ -7,19 +7,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
         integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles.css">
-    <title> ProgramadorChat</title>
+    <title>Tareas del estudiante - Tercer Trimestre</title>
 </head>
 
 <body>
+  <a href="index.html">Salir</a>
     <div class="chat-container">
         <header class="chat-header">
-            <h1><i class="fas fa-desktop"></i> Programador Chat</h1>
-            <a href="index.html" class="btn">Abandonar Chat</a>
+          <h2 id="room-name">JavaScript</h2>
+            <div class="chat-form-container">
+              <form id="nuevaTarea">
+                <input type="text" id="titulo" placeholder="Nueva Tarea" required />
+                <button type="submit" class="btn">Agregar</button>
+                <script>
+                  const boton = document.querySelector('.btn')
+                  boton.disabled = true;
+                </script>
+                
+              </form>
+              
+            </div>
+
+
         </header>
         <main class="chat-main">
             <div class="chat-sidebar">
-                <h3><i class="fas fa-comments"></i> Sala:</h3>
-                <h2 id="room-name">JavaScript</h2>
                 <h3><i class="fas fa-users"></i> Online:</h3>
                 <ul id="users">
                     <li>Vishnu</li>
@@ -28,17 +40,31 @@
                     <li>Binu</li>
                     <li>Jishwan</li>
                 </ul>
+                <h3><i class="fas fa-users"></i> Chat</h3>
+                <div>
+                  <div class="chat-messages"></div>
+                  <form id="chat-form">
+                      <input id="msg" type="text" placeholder="Escribir Mensaje" required autocomplete="off" />
+                      <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Enviar</button>
+                  </form>
+              </div>
             </div>
             <div class="chat-messages">
+                <section id="tarea-container">
+                    <ul id="tareas"></ul> <!-- Lista desordenada donde se mostrarán las tareas -->
+                  </section>
+            </div>
             </div>
         </main>
-        <div class="chat-form-container">
-            <form id="chat-form">
-                <input id="msg" type="text" placeholder="Escribir Mensaje" required autocomplete="off" />
-                <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Enviar</button>
-            </form>
-        </div>
+        
     </div>
+
+        
+    
+        
+    
+   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.2/qs.min.js"
         integrity="sha512-ErYZLDi4WRoox2JhOIADWBydTRhMJ0KIXnv5C1GvuY8YooLGapnebaM3iRGhwS6/E9ONXj0MRXp6bhu73sdFkg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
